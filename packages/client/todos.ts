@@ -1,3 +1,5 @@
+import './todos.css';
+
 import { Todo } from "@formation/common/todo";
 
 export function createTodo(todo: Todo): HTMLDivElement {

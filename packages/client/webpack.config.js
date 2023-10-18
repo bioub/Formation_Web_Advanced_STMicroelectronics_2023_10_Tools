@@ -23,7 +23,8 @@ const config = {
   module: {
     rules: [
       // all files with a `.ts`, `.cts`, `.mts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" }
+      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
+      { test: /\.css$/, use: ["style-loader", "css-loader"] }
     ]
   },
   plugins: [

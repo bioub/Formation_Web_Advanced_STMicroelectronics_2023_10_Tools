@@ -1,5 +1,6 @@
 import { Todo } from '../common/todo.js';
 import { createInputValue, createSpanValue, createTodo } from './todos.js';
+import config from './config.json';
 
 const formEl = document.querySelector('.todos-form') as HTMLFormElement;
 const inputEl = document.querySelector('.todos-new-input') as HTMLInputElement;
@@ -17,7 +18,7 @@ toggleEl.addEventListener('click', () => {
 formEl.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const res = await fetch('http://localhost:3001/api/todos');
+  const res = await fetch(config.baseUrlApi + '/todos');
   const todo: Todo = await res.json();
 
   const itemEl = createTodo(todo);
@@ -53,7 +54,7 @@ divEl.addEventListener('keydown', (event) => {
   }
 });
 
-const res = await fetch('http://localhost:3001/api/todos');
+const res = await fetch(config.baseUrlApi + '/todos');
 const todos: Todo[] = await res.json();
 
 for (const todo of todos.slice(0, 20)) {

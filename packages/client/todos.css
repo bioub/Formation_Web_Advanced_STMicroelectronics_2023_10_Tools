@@ -1,0 +1,8 @@
+.todos-item {
+  display: flex;
+  gap: 10px;
+}
+
+.todos-span-value, .todos-input-value {
+  flex: 1;
+}
