@@ -2,7 +2,11 @@
   "name": "@formation/client",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }
