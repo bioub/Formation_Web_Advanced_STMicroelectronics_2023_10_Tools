@@ -7,6 +7,9 @@
     "start": "serve ../../dist/client",
     "start:dev": "webpack serve --mode development"
   },
+  "dependencies": {
+    "@formation/common": "^1.0.0"
+  },
   "devDependencies": {
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
