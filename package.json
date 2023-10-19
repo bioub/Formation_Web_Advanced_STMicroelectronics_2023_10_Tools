@@ -5,11 +5,14 @@
   ],
   "devDependencies": {
     "@types/node": "^18.18.6",
+    "husky": "^8.0.3",
     "lerna": "^7.4.1",
+    "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "scripts": {
+    "prepare": "husky install",
     "build": "lerna run build",
     "watch": "lerna run --parallel watch",
     "start": "lerna run --parallel start",
