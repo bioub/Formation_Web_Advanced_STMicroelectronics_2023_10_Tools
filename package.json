@@ -11,6 +11,7 @@
   "scripts": {
     "build": "lerna run build",
     "watch": "lerna run --parallel watch",
-    "start": "lerna run --parallel start"
+    "start": "lerna run --parallel start",
+    "start:dev": "lerna run --parallel start:dev"
   }
 }

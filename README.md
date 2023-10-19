@@ -40,6 +40,12 @@ yarn workspace @formation/server run start
 yarn workspace @formation/client run start:dev
 ```
 
+Ou avec lerna :
+
+```
+yarn lerna run build --scope=@formation/client
+```
+
 Note : on peut aussi se placer d'abord au niveau du paquet :
 
 ```

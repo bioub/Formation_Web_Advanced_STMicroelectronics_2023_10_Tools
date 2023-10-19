@@ -4,7 +4,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development",
-    "start": "serve ../../dist/client"
+    "start": "serve ../../dist/client",
+    "start:dev": "webpack serve --mode development"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
@@ -15,6 +16,7 @@
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

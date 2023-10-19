@@ -2,7 +2,7 @@ import { app } from './app';
 import http from 'node:http';
 import mongoose from 'mongoose';
 
-let PORT = 3002;
+let PORT = 3001;
 
 async function start() {
   const server = http.createServer(app);
