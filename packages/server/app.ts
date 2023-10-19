@@ -1,4 +1,4 @@
-import express, { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
 import cors from 'cors';
 import { router as todoRouter } from './todos/route';
@@ -16,14 +16,14 @@ app.use(cors());
 
 app.use('/api/todos', todoRouter);
 
-app.use((req, res, next) => {
+app.use((_req, res, _next) => {
   res.statusCode = 404;
   res.json({
     msg: 'Not Found',
   });
 });
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
   if (err instanceof ZodError) {
     res.statusCode = 400;
     return res.json({

@@ -7,6 +7,7 @@ let PORT = 3001;
 async function start() {
   const server = http.createServer(app);
   server.on('error', (err) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if ((err as any).code === 'EADDRINUSE') {
       PORT++;
       return start();
