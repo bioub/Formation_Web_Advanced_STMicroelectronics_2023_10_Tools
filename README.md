@@ -54,6 +54,15 @@ Pour exécuter une commande commune de chaque workspace :
 yarn workspaces run build
 ```
 
+Au final comme dans Cube2, on utilise Lerna pour améliorer les workspaces
+et notamment pouvoir lancer des commandes en parallèle.
+
+Lance tous les scripts watch des paquets en parallèle :
+
+```
+lerna run --parallel watch
+```
+
 # Exercices Webpack
 
 ## Exercice 1
