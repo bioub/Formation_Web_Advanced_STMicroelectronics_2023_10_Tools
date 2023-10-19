@@ -1,5 +1,5 @@
-import { Todo } from '@formation/common/todo.js';
-import { createInputValue, createSpanValue, createTodo } from './todos.js';
+import { Todo } from '@formation/common/todo';
+import { createInputValue, createSpanValue, createTodo } from './todos';
 import config from './config.json';
 
 const formEl = document.querySelector('.todos-form') as HTMLFormElement;

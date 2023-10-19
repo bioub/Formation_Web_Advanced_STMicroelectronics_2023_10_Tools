@@ -1,3 +1,6 @@
 {
-  "baseUrlApi": "http://localhost:3001/api"
+  // production URL :
+  // "baseUrlApi": "https://jsonplaceholder.typicode.com",
+  // development URL :
+  "baseUrlApi": "http://localhost:3001/api",
 }
