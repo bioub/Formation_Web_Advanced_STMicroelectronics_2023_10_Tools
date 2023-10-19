@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "start": "node ../../dist/server/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

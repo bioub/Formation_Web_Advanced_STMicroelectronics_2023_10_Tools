@@ -5,9 +5,12 @@
   ],
   "devDependencies": {
     "@types/node": "^18.18.6",
+    "lerna": "^7.4.1",
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "build": "yarn workspaces run build"
+    "build": "lerna run build",
+    "watch": "lerna run --parallel watch",
+    "start": "lerna run --parallel start"
   }
 }

@@ -28,7 +28,7 @@ const config = {
       // all files with a `.ts`, `.cts`, `.mts` or `.tsx` extension will be handled by `ts-loader`
       { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
       { test: /\.css$/, use: [MiniCssExtractPlugin.loader, "css-loader"] },
-      { test: /\.json$/, type: 'json', parser: { parse: json5.parse } }
+      { test: /\.json5$/, type: 'json', parser: { parse: json5.parse } }
     ]
   },
   plugins: [

@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
-    "watch": "webpack --watch --mode development"
+    "watch": "webpack --watch --mode development",
+    "start": "serve ../../dist/client"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
     "json5": "^2.2.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "serve": "^14.2.1",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "webpack": "^5.89.0",
