@@ -31,6 +31,23 @@ yarn workspace @formation/server start
 yarn workspace @formation/client start:dev
 ```
 
+Ou si conflit avec un commande Yarn :
+
+```
+yarn workspace @formation/server run watch
+yarn workspace @formation/server run build
+yarn workspace @formation/server run start
+yarn workspace @formation/client run start:dev
+```
+
+Note : on peut aussi se placer d'abord au niveau du paquet :
+
+```
+cd packages/client
+yarn add webpack -D
+yarn build
+```
+
 Pour exécuter une commande commune de chaque workspace :
 
 ```

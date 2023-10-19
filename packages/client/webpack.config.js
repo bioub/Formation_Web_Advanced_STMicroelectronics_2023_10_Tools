@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 /** @type {import('webpack').Configuration} */
 const config = {
   devtool: false,
-  entry: './main.ts',
+  entry: './src/main.ts',
   output: {
     clean: true,
     path: path.resolve(__dirname, '../../dist/client'),
@@ -29,7 +29,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './src/index.html'
     }),
   ]
 };

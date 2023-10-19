@@ -1,4 +1,4 @@
-import { Todo } from '../common/todo.js';
+import { Todo } from '@formation/common/todo.js';
 import { createInputValue, createSpanValue, createTodo } from './todos.js';
 import config from './config.json';
 
