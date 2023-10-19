@@ -18,7 +18,13 @@ toggleEl.addEventListener('click', () => {
 formEl.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const res = await fetch(config.baseUrlApi + '/todos');
+  const res = await fetch(config.baseUrlApi + '/todos', {
+    method: 'POST',
+    body: JSON.stringify({ title: inputEl.value, completed: false }),
+    headers: {
+      'Content-type': 'application/json'
+    }
+  });
   const todo: Todo = await res.json();
 
   const itemEl = createTodo(todo);
@@ -59,7 +65,7 @@ const todos: Todo[] = await res.json();
 
 for (const todo of todos.slice(0, 20)) {
   const itemEl = createTodo(todo);
-  divEl.append(itemEl);
+  divEl.prepend(itemEl);
 }
 
 
