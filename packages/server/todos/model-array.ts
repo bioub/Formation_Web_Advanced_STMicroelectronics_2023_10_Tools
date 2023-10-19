@@ -14,9 +14,7 @@ export const todos: Todo[] = [
 ];
 
 export function nextId(): number {
-  return (
-    todos.reduce((maxId, todo) => (todo.id > maxId ? todo.id : maxId), 0) + 1
-  );
+  return todos.reduce((maxId, todo) => (todo.id > maxId ? todo.id : maxId), 0) + 1;
 }
 
 export async function find(): Promise<Todo[]> {
@@ -46,10 +44,7 @@ export async function findByIdAndRemove(id: string): Promise<Todo | undefined> {
   return oldTodo;
 }
 
-export async function findByIdAndReplace(
-  id: string,
-  todo: TodoDto
-): Promise<Todo | undefined> {
+export async function findByIdAndReplace(id: string, todo: TodoDto): Promise<Todo | undefined> {
   const oldTodo = await findById(id);
 
   if (!oldTodo) {
@@ -63,10 +58,7 @@ export async function findByIdAndReplace(
   return oldTodo;
 }
 
-export async function findByIdAndUpdate(
-  id: string,
-  todo: TodoDto
-): Promise<Todo | undefined> {
+export async function findByIdAndUpdate(id: string, todo: TodoDto): Promise<Todo | undefined> {
   const oldTodo = await findById(id);
 
   if (!oldTodo) {

@@ -3,6 +3,7 @@
   gap: 10px;
 }
 
-.todos-span-value, .todos-input-value {
+.todos-span-value,
+.todos-input-value {
   flex: 1;
 }

@@ -22,8 +22,8 @@ formEl.addEventListener('submit', async (event) => {
     method: 'POST',
     body: JSON.stringify({ title: inputEl.value, completed: false }),
     headers: {
-      'Content-type': 'application/json'
-    }
+      'Content-type': 'application/json',
+    },
   });
   const todo: Todo = await res.json();
 
@@ -52,10 +52,7 @@ divEl.addEventListener('dblclick', (event) => {
 divEl.addEventListener('keydown', (event) => {
   const target = event.target as HTMLElement;
 
-  if (
-    target.classList.contains('todos-input-value') &&
-    event.code === 'Enter'
-  ) {
+  if (target.classList.contains('todos-input-value') && event.code === 'Enter') {
     target.replaceWith(createSpanValue((target as HTMLInputElement).value));
   }
 });
@@ -67,7 +64,6 @@ for (const todo of todos.slice(0, 20)) {
   const itemEl = createTodo(todo);
   divEl.prepend(itemEl);
 }
-
 
 inputEl.addEventListener('input', () => {
   localStorage.setItem('new-todo', inputEl.value);

@@ -1,6 +1,6 @@
 import './todos.css';
 
-import { Todo } from "@formation/common/todo";
+import { Todo } from '@formation/common/todo';
 
 export function createTodo(todo: Todo): HTMLDivElement {
   const rowEl = document.createElement('div');

@@ -1,12 +1,5 @@
 import express from 'express';
-import {
-  createCtrl,
-  deleteCtrl,
-  listCtrl,
-  replaceCtrl,
-  showCtrl,
-  updateCtrl,
-} from './controller';
+import { createCtrl, deleteCtrl, listCtrl, replaceCtrl, showCtrl, updateCtrl } from './controller';
 
 export const router = express.Router();
 

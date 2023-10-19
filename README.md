@@ -90,7 +90,6 @@ Pour que le parseur d'un fichier dont l'extension est .json utilise la lib json5
 Bonus : faire fonctionner les extensions .json5
 Voir : https://github.com/json5/json5/wiki/Using-JSON5-with-TypeScript
 
-
 ## Exercice 3
 
 On veut remplacer les balises style par des balises link pour le CSS.

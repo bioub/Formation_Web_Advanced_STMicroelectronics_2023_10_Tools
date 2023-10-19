@@ -1,11 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Todo } from './model-mongoose';
 
-export async function listCtrl(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export async function listCtrl(req: Request, res: Response, next: NextFunction) {
   try {
     const todos = await Todo.find({}, 'title completed');
     res.json(todos);
@@ -14,11 +10,7 @@ export async function listCtrl(
   }
 }
 
-export async function showCtrl(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export async function showCtrl(req: Request, res: Response, next: NextFunction) {
   try {
     const todo = await Todo.findById(req.params.todoId, 'title completed');
 
@@ -32,11 +24,7 @@ export async function showCtrl(
   }
 }
 
-export async function createCtrl(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export async function createCtrl(req: Request, res: Response, next: NextFunction) {
   try {
     const newTodo = await Todo.create(req.body);
     res.statusCode = 201;
@@ -46,11 +34,7 @@ export async function createCtrl(
   }
 }
 
-export async function deleteCtrl(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export async function deleteCtrl(req: Request, res: Response, next: NextFunction) {
   try {
     const todo = await Todo.findByIdAndRemove(req.params.todoId);
 
@@ -64,16 +48,9 @@ export async function deleteCtrl(
   }
 }
 
-export async function replaceCtrl(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export async function replaceCtrl(req: Request, res: Response, next: NextFunction) {
   try {
-    const oldTodo = await Todo.findOneAndReplace(
-      { _id: req.params.todoId },
-      req.body,
-    );
+    const oldTodo = await Todo.findOneAndReplace({ _id: req.params.todoId }, req.body);
 
     if (!oldTodo) {
       return next();
@@ -85,11 +62,7 @@ export async function replaceCtrl(
   }
 }
 
-export async function updateCtrl(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export async function updateCtrl(req: Request, res: Response, next: NextFunction) {
   try {
     const oldTodo = await Todo.findByIdAndUpdate(req.params.todoId, req.body);
 

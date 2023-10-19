@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 import { Todo as TodoType } from '@formation/common/todo';
 
 const todoSchema = new Schema<TodoType>({
@@ -12,4 +12,3 @@ const todoSchema = new Schema<TodoType>({
 });
 
 export const Todo = model<TodoType>('Todo', todoSchema);
-
