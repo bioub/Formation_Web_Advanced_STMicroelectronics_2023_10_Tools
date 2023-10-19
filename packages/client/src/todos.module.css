@@ -1,0 +1,9 @@
+.todosItem {
+  display: flex;
+  gap: 10px;
+}
+
+.todosSpanValue,
+.todosInputValue {
+  flex: 1;
+}

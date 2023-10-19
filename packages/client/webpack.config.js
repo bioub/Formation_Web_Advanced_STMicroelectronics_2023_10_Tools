@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('node:path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BannerPlugin } = require('webpack');
