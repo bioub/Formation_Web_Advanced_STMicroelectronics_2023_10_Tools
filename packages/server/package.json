@@ -5,7 +5,9 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "start": "node ../../dist/server/index.js",
-    "start:dev": "nodemon --exec ts-node index.ts"
+    "start:dev": "nodemon --exec ts-node index.ts",
+    "test": "mocha --require ts-node/register \"**/*.test.ts\"",
+    "coverage": "nyc -r html -r text yarn test"
   },
   "dependencies": {
     "@formation/common": "^2.0.0",

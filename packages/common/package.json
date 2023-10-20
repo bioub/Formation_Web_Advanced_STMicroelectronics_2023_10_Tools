@@ -4,6 +4,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "test": "mocha --require ts-node/register \"**/*.spec.ts\""
+    "test": "mocha --require ts-node/register \"**/*.test.ts\"",
+    "coverage": "nyc -r html -r text yarn test"
   }
 }
