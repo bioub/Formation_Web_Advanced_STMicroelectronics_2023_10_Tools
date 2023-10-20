@@ -1,4 +1,4 @@
-import style from './todos.module.css';
+import style from './todos.module.scss';
 
 import { Todo } from '@formation/common/todo';
 

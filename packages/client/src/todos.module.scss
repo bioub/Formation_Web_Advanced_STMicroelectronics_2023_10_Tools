@@ -1,9 +1,13 @@
+$mainColor: lightgray;
+
 .todosItem {
   display: flex;
   gap: 10px;
+  background-color: $mainColor;
 }
 
 .todosSpanValue,
 .todosInputValue {
   flex: 1;
+  background-color: $mainColor;
 }
